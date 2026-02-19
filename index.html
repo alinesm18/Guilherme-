@@ -6,48 +6,48 @@
 <title>Guilherme 💘</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-    height:100vh;
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7, #ffc3a0);
-    font-family:'Poppins', sans-serif;
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#ffdde1,#ee9ca7,#ffc3a0);
+    font-family:'Poppins',sans-serif;
     display:flex;
     align-items:center;
     justify-content:center;
-    overflow:hidden;
+    overflow-x:hidden;
+    padding:20px;
 }
 
-.container {
+.container{
     backdrop-filter: blur(18px);
     background: rgba(255,255,255,0.18);
     border-radius:30px;
-    padding:60px 40px;
-    width:90%;
-    max-width:850px;
+    padding:50px 35px;
+    width:100%;
+    max-width:900px;
     box-shadow:0 0 60px rgba(255,105,180,0.35);
     text-align:center;
-    animation: fadeIn 2s ease;
     border:1px solid rgba(255,255,255,0.3);
+    animation:fadeIn 2s ease;
 }
 
-h1 {
-    font-family:'Great Vibes', cursive;
-    font-size:4.5rem;
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:4.2rem;
     color:#fff;
-    margin-bottom:10px;
     text-shadow:0 0 20px rgba(255,255,255,0.9);
 }
 
-.date {
+.date{
     font-size:1.2rem;
     color:#fff;
     opacity:0.9;
-    margin-bottom:25px;
-    letter-spacing:2px;
+    margin-bottom:20px;
+    letter-spacing:3px;
 }
 
-.message {
+.message{
     font-size:1.3rem;
     line-height:1.8;
     color:#fff;
@@ -55,64 +55,73 @@ h1 {
     font-weight:300;
 }
 
-.lyrics {
-    margin-top:30px;
-    font-size:1.1rem;
-    line-height:1.9;
-    color:#fff;
-    white-space:pre-line;
-    padding:25px;
+.spotify-box{
+    background:#121212;
     border-radius:20px;
-    background: rgba(255,255,255,0.12);
-    box-shadow: inset 0 0 20px rgba(255,255,255,0.1);
+    padding:25px;
+    margin-top:25px;
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
 }
 
-.credit {
+.spotify-title{
+    color:#1DB954;
+    font-weight:600;
+    margin-bottom:10px;
+    font-size:1.1rem;
+    letter-spacing:1px;
+}
+
+.lyrics{
     margin-top:25px;
+    color:#fff;
+    line-height:1.9;
+    font-size:1.05rem;
+    background:rgba(255,255,255,0.12);
+    padding:20px;
+    border-radius:15px;
+    white-space:pre-line;
+}
+
+.credit{
+    margin-top:20px;
     font-size:0.9rem;
     color:rgba(255,255,255,0.85);
     font-style:italic;
 }
 
-footer {
-    margin-top:25px;
+footer{
+    margin-top:20px;
     font-size:0.85rem;
     color:rgba(255,255,255,0.75);
 }
 
-@keyframes fadeIn {
-    from { opacity:0; transform:translateY(40px); }
-    to { opacity:1; transform:translateY(0); }
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(40px);}
+    to{opacity:1;transform:translateY(0);}
 }
 
 /* corações flutuantes */
-.floating-hearts span {
+.floating-hearts span{
     position:absolute;
     display:block;
     color:rgba(255,255,255,0.6);
-    animation: float 12s linear infinite;
+    animation:float 12s linear infinite;
     font-size:22px;
 }
+.floating-hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.floating-hearts span:nth-child(2){left:25%;animation-delay:2s;}
+.floating-hearts span:nth-child(3){left:50%;animation-delay:4s;}
+.floating-hearts span:nth-child(4){left:70%;animation-delay:6s;}
+.floating-hearts span:nth-child(5){left:85%;animation-delay:8s;}
 
-.floating-hearts span:nth-child(1){ left:10%; animation-delay:0s; }
-.floating-hearts span:nth-child(2){ left:25%; animation-delay:2s; }
-.floating-hearts span:nth-child(3){ left:50%; animation-delay:4s; }
-.floating-hearts span:nth-child(4){ left:70%; animation-delay:6s; }
-.floating-hearts span:nth-child(5){ left:85%; animation-delay:8s; }
-
-@keyframes float {
-    0% { top:100%; opacity:0; transform:scale(0.8); }
-    50% { opacity:1; transform:scale(1.2); }
-    100% { top:-10%; opacity:0; transform:scale(0.9); }
+@keyframes float{
+    0%{top:100%;opacity:0;transform:scale(0.8);}
+    50%{opacity:1;transform:scale(1.2);}
+    100%{top:-10%;opacity:0;transform:scale(0.9);}
 }
 </style>
 </head>
 <body>
-
-<!-- 🎶 MÚSICA AUTOMÁTICA (player invisível) -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/9xwazD5SyVg?autoplay=1&loop=1&playlist=9xwazD5SyVg"
-frameborder="0" allow="autoplay"></iframe>
 
 <div class="floating-hearts">
     <span>❤</span>
@@ -130,14 +139,29 @@ frameborder="0" allow="autoplay"></iframe>
         Mais um dia 19 com o amor da minha vida! ✨💖
     </div>
 
+    <div class="spotify-box">
+        <div class="spotify-title">
+            Tocando nossa música no :contentReference[oaicite:0]{index=0} 🎧
+        </div>
+
+        <!-- PLAYER SPOTIFY -->
+        <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/5QO79kh1waicV47BqGRL3g?utm_source=generator"
+        width="100%" height="152" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+    </div>
+
     <div class="lyrics">
-        Esta página é dedicada à nossa história,
-        ao nosso amor e a todos os dias 19
-        que ainda vamos viver juntos. 💞
+        <!-- COLE AQUI A LETRA COMPLETA SE QUISER -->
+        Essa é a nossa música…
+        cada verso me lembra você,
+        cada refrão me faz ter certeza
+        que é com você que quero viver todos os meus dias 19. 💞
     </div>
 
     <div class="credit">
-        Inspiração musical: “Te Amar” – Priscila Senna 🎶
+        Música: “Te Amar” – :contentReference[oaicite:1]{index=1} 🎶
     </div>
 
     <footer>
